@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Calculator as CalculatorIcon } from 'lucide-react';
 
@@ -88,7 +87,7 @@ const Calculator = () => {
   }) => (
     <button
       onClick={onClick}
-      className={`h-16 rounded-2xl font-semibold text-lg transition-all duration-200 active:scale-95 hover:shadow-lg ${className}`}
+      className={`h-20 rounded-2xl font-semibold text-xl transition-all duration-200 active:scale-95 hover:shadow-lg ${className}`}
     >
       {children}
     </button>
@@ -96,7 +95,7 @@ const Calculator = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      <div className="bg-black/40 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/10">
+      <div className="bg-black/40 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/10 w-full max-w-md">
         <div className="flex items-center justify-center mb-6">
           <CalculatorIcon className="text-purple-400 mr-3" size={32} />
           <h1 className="text-2xl font-bold text-white">Calculator</h1>
@@ -115,7 +114,7 @@ const Calculator = () => {
         </div>
 
         {/* Buttons */}
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-4 gap-4">
           {/* First Row */}
           <Button
             onClick={handleClear}
